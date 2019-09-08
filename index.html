@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> Film Search </title>
 	<script src="MovieScripts.js"></script>
-    <title>Film Search App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/3b4ec06cc2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
   </head>
-
   <body>
-	<div id ="search">
-		Search a film <input type = text, id = "Name", >
-		<input type = "button", onclick = "search()" value = "Submit">
+	<div id ="search" class = "search">
+		<input type = "text" class = "Name" id = "Name" onkeydown="key_down(event);" placeholder = "Enter a title then click the reel to search">
+		<button class = "submit" onclick = "search()" ><i class = "fas fa-film"></i></button>
 	</div>
-    <div id="root"></div>
-    <script src="MovieScripts.js"></script>
+	<div id = "root">
+		<div id = "div" class = "div2"></div>
+		</div>
+	</div>
   </body>
 </html>
