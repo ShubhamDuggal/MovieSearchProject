@@ -3,64 +3,64 @@
 }
 
 html {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	line-height: 1.6;
-	color: white;
-	background: #b1b1cd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  line-height: 1.6;
+  color: white;
+  background: #b1b1cd;
 }
 
 input:focus{
-	outline: none;
+  outline: none;
 }
 
 button:focus{
-	outline: none;
+  outline: none;
 }
 
 #search {
-	text-align: center;
-	position: fixed; 
-	top: 25%;
-	left: 45%;
-	margin-top: -50px;
-    margin-left: -100px;
+  text-align: center;
+  position: fixed; 
+  top: 25%;
+  left: 45%;
+  margin-top: -50px;
+  margin-left: -100px;
 	
 }
 
 .search .submit{
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	background: #b1b1cd;
-	border: 1px;
-	font-size: 22pt;
-	float: center;
-	color: #63717f;
-	padding-left:10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #b1b1cd;
+  border: 1px;
+  font-size: 22pt;
+  float: center;
+  color: #63717f;
+  padding-left:10px;
 }
 
 #search input#Name{
-	width: 325px;
-	height: 50px;
-	background: white;
-	border: none;
-	font-size: 12pt;
-	float: left;
-	color: #63717f;
-	padding-left: 15px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+  width: 325px;
+  height: 50px;
+  background: white;
+  border: none;
+  font-size: 12pt;
+  float: left;
+  color: #63717f;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 #root {
-	position: fixed; 
-	top: 30%;
-	left: 450px;
-	max-width: 50%;
-	margin: 0;
+  position: fixed; 
+  top: 30%;
+  left: 450px;
+  max-width: 50%;
+  margin: 0;
 }
 
 h1 {
@@ -80,12 +80,12 @@ img {
 }
 
 p {
-  padding: 0 2.5rem .5rem;
+  padding: 0 2.5rem 0rem;
 }
 
 cast {
   display: block;
-  padding: 10px 2.5rem 1rem;
+  padding: 1rem 2.5rem 0rem;
 }
 
 rel {
@@ -102,6 +102,11 @@ rate {
 
 reviews {
   padding: 0 2.5rem 2.5rem;
+}
+
+sources {
+  display: block;
+  padding: 1rem 2.5rem 1rem;
 }
 
 .container {
