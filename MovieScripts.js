@@ -67,11 +67,12 @@ function search(){
 			const director = document.createElement('director')
 			const reviews  = document.createElement('reviews') 
 			
-			if (data.ratings != undefined){
-				if (data.Ratings.length > 0){
+		//	if (data.ratings != undefined){
+			//	if (data.Ratings.length > 0){
+				if (data.Ratings[1] != undefined){
 					reviews.textContent = `${data.Ratings[1].Source} : ${data.Ratings[1].Value}`
 				}
-			}
+		//	}
 			
 			h1.textContent       = data.Title
 			p.textContent 		 = `${data.Plot}`
@@ -99,16 +100,16 @@ function search(){
 			app.appendChild(errorMessage)
 		}
 	}
-	request.send()
+	request.send();
 }
 
-// function getSources{
-	// var unirest = require("unirest");
 
+// function getSources(){
+	// var unirest = require("unirest");
 	// var req = unirest("GET", "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup");
 
 	// req.query({
-		// "term": title,
+		// "term": "The Shawshank Redemption";
 	// });
 
 	// req.headers({
