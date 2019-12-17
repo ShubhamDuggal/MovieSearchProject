@@ -7,8 +7,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   line-height: 1.6;
-  color: white;
-  background: #b1b1cd;
+  background: #383835;
 }
 
 input:focus{
@@ -33,16 +32,17 @@ button:focus{
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background: #b1b1cd;
+  background: white;
   border: 1px;
   font-size: 22pt;
-  float: center;
+  float: left;
   color: #63717f;
-  padding-left:10px;
+  margin-left: 0px;
+  border-radius: 0px 5px 5px 0px;
 }
 
 #search input#Name{
-  width: 325px;
+  width: 300px;
   height: 50px;
   background: white;
   border: none;
@@ -50,15 +50,13 @@ button:focus{
   float: left;
   color: #63717f;
   padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  border-radius:5px 0px 0px 5px;
 }
 
 #root {
   position: fixed; 
   top: 30%;
-  left: 450px;
+  left: 25%;
   max-width: 50%;
   margin: 0;
 }
@@ -66,11 +64,11 @@ button:focus{
 h1 {
   text-align: center;
   padding: 1rem 2.5rem;
-  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  background-image: linear-gradient(#f5f7fa  15%, #c3cfe2 70%);
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
   font-family: "Arial Black", Gadget, sans-serif;
-  color: white;
+  color: #304459;
 }
 
 img {
@@ -119,4 +117,6 @@ sources {
   background: gray;
   color: white;
   border-radius: 12px;
+  flex-wrap: wrap;
+  width: 90%;
 }

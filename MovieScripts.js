@@ -102,25 +102,3 @@ function search(){
 	}
 	request.send();
 }
-
-
-// function getSources(){
-	// var unirest = require("unirest");
-	// var req = unirest("GET", "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup");
-
-	// req.query({
-		// "term": "The Shawshank Redemption";
-	// });
-
-	// req.headers({
-		// "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-		// "x-rapidapi-key": "d58ce49f7bmsh6c2652635ed2fecp1ef5c6jsnf8a990d34b0b"
-	// });
-
-
-	// req.end(function (res) {
-		// if (res.error) throw new Error(res.error);
-
-		// console.log(res.body);
-	// });
-// }
