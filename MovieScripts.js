@@ -4,16 +4,40 @@ function key_down(e) { //allow users to press enter instead of clicking the subm
 	}
 }
 
+var tracker = true;
+
+function saveValue(e){
+            var id = e.id;
+            var val = e.value; 
+            localStorage.setItem(id, val);
+        }
+
+        
+function getSavedValue  (e){
+		if (!localStorage.getItem(e)) {
+			return "";
+		}
+		return localStorage.getItem(e);
+	}
+		
 function search(){
+	
 	const app = document.getElementById('root')
 	const logo = document.createElement('img')
 	const container = document.getElementById('div')
 	const card = document.createElement('div')
 	const inputTitle = document.getElementById('Name')
 	const openAddress = 'http://omdbapi.com/?t=' + inputTitle.value + '&apikey=a5834c47'
-	
 	container.setAttribute('class', 'container')
 	card.setAttribute('class', 'card')
+
+	if (!tracker){ 
+		tracker = true;
+		location.reload();
+		inputTitle = getSavedValue('Name');
+		search();
+	}
+	else tracker = false;
 	
 	var request = new XMLHttpRequest()
 	request.open('GET', openAddress, true) //Open connection to OMDb API
@@ -70,7 +94,7 @@ function search(){
 		//	if (data.ratings != undefined){
 			//	if (data.Ratings.length > 0){
 				if (data.Ratings[1] != undefined){
-					reviews.textContent = `${data.Ratings[1].Source} : ${data.Ratings[1].Value}`
+					reviews.textContent = `${data.Ratings[1].Source}:${data.Ratings[1].Value}`
 				}
 		//	}
 			
