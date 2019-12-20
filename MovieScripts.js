@@ -3,17 +3,6 @@ function key_down(e) { //allow users to press enter instead of clicking the subm
 		search();
 	}
 }
-
-var tracker = true;
-	
-function onload(){
-	if (tracker){
-		document.getElementById('Name').value = getSavedValue("Title");
-		alert(document.getElementById('Name').value)
-		tracker = true;
-		search();
-	}
-}
 		
 function search(){
 	const app = document.getElementById('root')
@@ -26,6 +15,7 @@ function search(){
 	card.setAttribute('class', 'card')
 
 	if (container.firstChild) container.removeChild(container.firstChild);
+	if (container.childElementCount > 1) container.removeChild(container.firstChild);
 	
 	var request = new XMLHttpRequest()
 	request.open('GET', openAddress, true) //Open connection to OMDb API
