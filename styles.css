@@ -87,19 +87,19 @@ cast {
 }
 
 rel {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.5rem 1rem;
 }
 
 director {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 1rem 1rem;
 }
 
 rate {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 1rem 1rem;
 }
 
 reviews {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 1rem;
 }
 
 sources {
@@ -119,4 +119,10 @@ sources {
   border-radius: 12px;
   flex-wrap: wrap;
   width: 900px;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    background-color: lightblue;
+  }
 }
