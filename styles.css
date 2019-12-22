@@ -121,8 +121,30 @@ sources {
   width: 900px;
 }
 
-@media only screen and (max-width: 600px) {
-  html {
-    background-color: lightblue;
-  }
+@media only screen and (max-width: 426px) {
+  #search input#Name{
+	  width: 225px;
+	  height: 50px;
+	}
+}
+
+@media only screen and (max-width: 1700px) {
+	  
+	reviews {
+		display: block;
+		padding: 1rem 2.5rem 0rem;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	director {
+		display: block;
+		padding: 1rem 2.5rem 0rem;
+	}
+
+	rate {
+		display: block;
+		padding: 1rem 2.5rem 0rem;
+	}
+	
 }
