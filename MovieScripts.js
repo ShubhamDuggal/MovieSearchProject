@@ -1,9 +1,9 @@
 function key_down(e) { //allow users to press enter instead of clicking the submit button on the form
 	if(e.keyCode == 13) {
-		search();
+		search(); //call search when the enter key is pressed
 	}
 }
-		
+
 function search(){
 	const app = document.getElementById('root')
 	const logo = document.createElement('img')
@@ -16,18 +16,18 @@ function search(){
 
 	if (container.firstChild) container.removeChild(container.firstChild);
 	if (container.childElementCount > 1) container.removeChild(container.firstChild);
-	
+
 	var request = new XMLHttpRequest()
 	request.open('GET', openAddress, true) //Open connection to OMDb API
 
-	request.onload = function() { 
+	request.onload = function() {
 		var data = JSON.parse(this.response) //parse OMDb response
 		if (request.status >= 200 && request.status < 400) {
-			
+
 			if (document.getElementById('Name').value == "") { //User cannot submit empty search, alert them if they attempt this
 				alert("Please enter a title or partial title.")
 			}
-			
+
 			const sources = document.createElement('sources')
 			var tempSources = '';
 
@@ -47,7 +47,7 @@ function search(){
 					for(i = 0; i < response.results.length; i++){
 						if (response.results[i].name == data.Title){
 							for (j = 0; j < response.results[i].locations.length; j++){
-								
+
 								if (j == response.results[i].locations.length - 1){
 									tempSources += response.results[i].locations[j].display_name
 								}
@@ -60,27 +60,32 @@ function search(){
 					}
 				}
 			});
-			
-			const h1	   = document.createElement('h1')
-			const p        = document.createElement('p') 
+			//Create dom elements
+			const h1    = document.createElement('h1')
+			const a	    = document.createElement('a')
+			const link	= document.createTextNode (data.Title)
+			a.appendChild(link);
+			a.title = data.Title;
+			a.href = "https://www.google.com/search?q=" + data.Title;
+			h1.appendChild(a);
+			const p        = document.createElement('p')
 			const cast     = document.createElement('cast')
 			const rel      = document.createElement('rel')
 			const rate     = document.createElement('rate')
 			const director = document.createElement('director')
-			const reviews  = document.createElement('reviews') 
-			
+			const reviews  = document.createElement('reviews')
+			//add content to DOM elements
 			if (data.Ratings[1] != undefined){
 				reviews.textContent = `${data.Ratings[1].Source}: ${data.Ratings[1].Value}`
 			}
 
-			
-			h1.textContent       = data.Title
 			p.textContent 		 = `${data.Plot}`
 			cast.textContent     = `Cast: ${data.Actors}`
 			rel.textContent      = `Released: ${data.Year}`
 			rate.textContent     = `Rated: ${data.Rated}`
 			director.textContent = `Directed by ${data.Director}`
-			
+
+			//add elements to containers
 			container.appendChild(card)
 			card.appendChild(h1)
 			card.appendChild(p)
