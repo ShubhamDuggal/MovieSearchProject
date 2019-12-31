@@ -61,13 +61,13 @@ function search(){
 				}
 			});
 			//Create dom elements
-			const h1    = document.createElement('h1')
-			const a	    = document.createElement('a')
+			const Title    = document.createElement('h1')
+			const anchor	    = document.createElement('a')
 			const link	= document.createTextNode (data.Title)
-			a.appendChild(link);
-			a.title = data.Title;
-			a.href = "https://www.google.com/search?q=" + data.Title;
-			h1.appendChild(a);
+			anchor.appendChild(link);
+			anchor.title = data.Title;
+			anchor.href = "https://www.google.com/search?q=" + data.Title;
+			Title.appendChild(anchor);
 			const p        = document.createElement('p')
 			const cast     = document.createElement('cast')
 			const rel      = document.createElement('rel')
@@ -87,7 +87,7 @@ function search(){
 
 			//add elements to containers
 			container.appendChild(card)
-			card.appendChild(h1)
+			card.appendChild(Title)
 			card.appendChild(p)
 			card.appendChild(rel)
 			card.appendChild(director)
